@@ -1,0 +1,799 @@
+[33mcommit 930e5f19af1101b1e154d915a7121c45fc7be018[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: tbakah <akseli.ahonen@tuni.fi>
+Date:   Thu Sep 28 16:42:03 2023 +0300
+
+    Tunnistus
+
+[1mdiff --git a/.idea/.gitignore b/.idea/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..26d3352[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.gitignore[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m# Default ignored files[m
+[32m+[m[32m/shelf/[m
+[32m+[m[32m/workspace.xml[m
+[1mdiff --git a/.idea/.name b/.idea/.name[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8f962e2[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.name[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mcifar10_illustrate.py[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/Tunnistus.iml b/.idea/Tunnistus.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..36c1f94[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/Tunnistus.iml[m
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module type="PYTHON_MODULE" version="4">[m
+[32m+[m[32m  <component name="NewModuleRootManager">[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/venv" />[m
+[32m+[m[32m    </content>[m
+[32m+[m[32m    <orderEntry type="jdk" jdkName="Python 3.10 (dataml100)" jdkType="Python SDK" />[m
+[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</module>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d9b2dcc[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/inspectionProfiles/Project_Default.xml[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32m<component name="InspectionProjectProfileManager">[m
+[32m+[m[32m  <profile version="1.0">[m
+[32m+[m[32m    <option name="myName" value="Project Default" />[m
+[32m+[m[32m    <inspection_tool class="LanguageDetectionInspection" enabled="false" level="WARNING" enabled_by_default="false" />[m
+[32m+[m[32m    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">[m
+[32m+[m[32m      <option name="ignoredErrors">[m
+[32m+[m[32m        <list>[m
+[32m+[m[32m          <option value="N806" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </option>[m
+[32m+[m[32m    </inspection_tool>[m
+[32m+[m[32m    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">[m
+[32m+[m[32m      <option name="processCode" value="true" />[m
+[32m+[m[32m      <option name="processLiterals" value="true" />[m
+[32m+[m[32m      <option name="processComments" value="true" />[m
+[32m+[m[32m    </inspection_tool>[m
+[32m+[m[32m  </profile>[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..105ce2d[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/inspectionProfiles/profiles_settings.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<component name="InspectionProjectProfileManager">[m
+[32m+[m[32m  <settings>[m
+[32m+[m[32m    <option name="USE_PROJECT_PROFILE" value="false" />[m
+[32m+[m[32m    <version value="1.0" />[m
+[32m+[m[32m  </settings>[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/misc.xml b/.idea/misc.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9d03aaf[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/misc.xml[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (dataml100)" project-jdk-type="Python SDK" />[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f984cef[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/modules.xml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectModuleManager">[m
+[32m+[m[32m    <modules>[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/.idea/Tunnistus.iml" filepath="$PROJECT_DIR$/.idea/Tunnistus.iml" />[m
+[32m+[m[32m    </modules>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/Ahonen_fit_line.py b/Ahonen_fit_line.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..48f1703[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_fit_line.py[m
+[36m@@ -0,0 +1,54 @@[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m[32mimport matplotlib.pyplot as plt[m
+[32m+[m[32mfrom matplotlib.animation import FuncAnimation[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# calculate values for a and b[m
+[32m+[m[32mdef my_linfit(x, y):[m
+[32m+[m[32m    # size for n[m
+[32m+[m[32m    n = len(x)[m
+[32m+[m[32m    # sum for each combination[m
+[32m+[m[32m    sum_x = np.sum(x)[m
+[32m+[m[32m    sum_y = np.sum(y)[m
+[32m+[m[32m    square_x = np.sum([x_i ** 2 for x_i in x])[m
+[32m+[m[32m    sum_xy = np.sum([x_i * y_i for x_i, y_i in zip(x, y)])[m
+[32m+[m
+[32m+[m[32m    # calculate the a and b[m
+[32m+[m[32m    a = (n * sum_xy - sum_x * sum_y) / (n * square_x - sum_x ** 2)[m
+[32m+[m[32m    b = (sum_y - a * sum_x) / n[m
+[32m+[m[32m    return a, b[m
+[32m+[m
+[32m+[m
+[32m+[m[32mx_vals = [][m
+[32m+[m[32my_vals = [][m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Save clicked values and plot line when right clicking[m
+[32m+[m[32mdef onclick(event):[m
+[32m+[m[32m    if event.button == 1:[m
+[32m+[m[32m        x_vals.append(event.xdata)[m
+[32m+[m[32m        y_vals.append(event.ydata)[m
+[32m+[m[32m    elif event.button == 3 and len(x_vals) > 1:[m
+[32m+[m[32m        a, b = my_linfit(x_vals, y_vals)[m
+[32m+[m[32m        xp = np.linspace(-10, 10, 10)[m
+[32m+[m[32m        plt.plot(xp, a * xp + b, 'r-')[m
+[32m+[m[32m        print(f"Myfit:a={a} and b={b}")[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Create plot for clicked places[m
+[32m+[m[32mfig, ax = plt.subplots()[m
+[32m+[m[32mplt.xlim(-10, 10)[m
+[32m+[m[32mplt.ylim(-10, 10)[m
+[32m+[m[32mplt.autoscale(False)[m
+[32m+[m[32mfig.canvas.mpl_connect('button_press_event', onclick)[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Animate values in real time to the plot[m
+[32m+[m[32mdef animate(i):[m
+[32m+[m[32m    # Cheks if there is something to plot[m
+[32m+[m[32m    if x_vals:[m
+[32m+[m[32m        plt.plot(x_vals, y_vals, 'kx')[m
+[32m+[m
+[32m+[m
+[32m+[m[32mani = FuncAnimation(plt.gcf(), animate, cache_frame_data=False, interval=500)[m
+[32m+[m[32mplt.show()[m
+[1mdiff --git a/Ahonen_histogram.py b/Ahonen_histogram.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..86d13ff[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_histogram.py[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32mimport numpy[m
+[32m+[m[32mimport matplotlib.pyplot as plt[m
+[32m+[m
+[32m+[m[32mdef main():[m
+[32m+[m[32m    x_data = numpy.loadtxt('male_female_X_train.txt')[m
+[32m+[m[32m    y_data = numpy.loadtxt('male_female_y_train.txt')[m
+[32m+[m[32m    all_data = numpy.column_stack((x_data[:, 0], y_data))[m
+[32m+[m[32m    male_heigth = all_data[all_data[:, 1] == 0][:, 0][m
+[32m+[m[32m    female_heigth = all_data[all_data[:, 1] == 1][:, 0][m
+[32m+[m
+[32m+[m[32m    plt.hist(male_heigth, alpha=0.6, label='Male', color='blue')[m
+[32m+[m[32m    plt.hist(female_heigth, alpha=0.6, label='Female', color='pink')[m
+[32m+[m
+[32m+[m[32m    plt.xlabel('Height (cm)')[m
+[32m+[m[32m    plt.ylabel('Frequency')[m
+[32m+[m[32m    plt.title('Height Histogram by Gender')[m
+[32m+[m[32m    plt.legend()[m
+[32m+[m
+[32m+[m[32m    plt.show()[m
+[32m+[m
+[32m+[m[32m    #print(y_data, x_data)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    main()[m
+\ No newline at end of file[m
+[1mdiff --git a/Ahonen_male_female_baseline.py b/Ahonen_male_female_baseline.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..865c2a7[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_male_female_baseline.py[m
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32mimport numpy[m
+[32m+[m[32mimport random[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef main():[m
+[32m+[m[32m    x_data_train = numpy.loadtxt('male_female_X_train.txt')[m
+[32m+[m[32m    y_data_train = numpy.loadtxt('male_female_y_train.txt')[m
+[32m+[m
+[32m+[m[32m    x_data_test = numpy.loadtxt('male_female_X_test.txt')[m
+[32m+[m[32m    y_data_test = numpy.loadtxt('male_female_y_test.txt')[m
+[32m+[m
+[32m+[m[32m    y_data_train = y_data_train.astype(numpy.int64)[m
+[32m+[m
+[32m+[m[32m    random_class = [random.choice(y_data_train) for _ in range(len(x_data_test))][m
+[32m+[m[32m    correct_count_random = sum(1 for p, t in zip(random_class, y_data_test) if p == t)[m
+[32m+[m[32m    random_accuracy = correct_count_random / len(y_data_test)[m
+[32m+[m[32m    print(f"Random Classifier Accuracy: {random_accuracy:.2%}")[m
+[32m+[m
+[32m+[m[32m    most_likely_class = numpy.bincount(y_data_train).argmax()[m
+[32m+[m[32m    most_likely_prediction = [most_likely_class] * len(x_data_test)[m
+[32m+[m[32m    correct_count_most_likely = sum(1 for p, t in zip(most_likely_prediction, y_data_test) if p == t)[m
+[32m+[m[32m    most_likely_accuracy = correct_count_most_likely / len(y_data_test)[m
+[32m+[m
+[32m+[m[32m    print(f"Most Likely Classifier Accuracy: {most_likely_accuracy:.2%}: The class is {most_likely_class}")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    main()[m
+\ No newline at end of file[m
+[1mdiff --git a/Ahonen_male_female_bayes.py b/Ahonen_male_female_bayes.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1faf6ac[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_male_female_bayes.py[m
+[36m@@ -0,0 +1,171 @@[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m
+[32m+[m[32m#Used data[m
+[32m+[m[32mx_data_train = np.loadtxt('male_female_X_train.txt')[m
+[32m+[m[32my_data_train = np.loadtxt('male_female_y_train.txt')[m
+[32m+[m
+[32m+[m[32mx_data_test = np.loadtxt('male_female_X_test.txt')[m
+[32m+[m[32my_data_test = np.loadtxt('male_female_y_test.txt')[m
+[32m+[m
+[32m+[m[32my_data_train = y_data_train.reshape(-1, 1)[m
+[32m+[m
+[32m+[m[32m# Combine the data[m
+[32m+[m[32mall_data = np.hstack((x_data_train, y_data_train))[m
+[32m+[m[32mmale_height_train = all_data[all_data[:, 2] == 0][:, 0][m
+[32m+[m[32mfemale_height_train = all_data[all_data[:, 2] == 1][:, 0][m
+[32m+[m
+[32m+[m[32mmale_weight_train = all_data[all_data[:, 2] == 0][:, 1][m
+[32m+[m[32mfemale_weight_train = all_data[all_data[:, 2] == 1][:, 1][m
+[32m+[m
+[32m+[m[32m# Prior for male and female[m
+[32m+[m[32mprior_male = np.mean(y_data_train == 0)[m
+[32m+[m[32mprior_female = np.mean(y_data_train == 1)[m
+[32m+[m
+[32m+[m[32mprint("Prior for male: ", prior_male)[m
+[32m+[m[32mprint("Prior for female: ", prior_female)[m
+[32m+[m
+[32m+[m[32m# Calculate histograms for height and weight for males and females[m
+[32m+[m
+[32m+[m[32mhist_height_male, bin_edges_height_male = np.histogram(male_height_train)[m
+[32m+[m[32mhist_weight_male, bin_edges_weight_male = np.histogram(male_weight_train)[m
+[32m+[m
+[32m+[m[32mhist_height_female, bin_edges_height_female = np.histogram(female_height_train)[m
+[32m+[m[32mhist_weight_female, bin_edges_weight_female = np.histogram(female_weight_train)[m
+[32m+[m
+[32m+[m[32m# Compute the bin centroids for height and weight[m
+[32m+[m[32mbin_centers_height_male = (bin_edges_height_male[:-1] +[m
+[32m+[m[32m                           bin_edges_height_male[1:]) / 2[m
+[32m+[m[32mbin_centers_weight_male = (bin_edges_weight_male[:-1] +[m
+[32m+[m[32m                           bin_edges_weight_male[1:]) / 2[m
+[32m+[m
+[32m+[m[32mbin_centers_height_female = (bin_edges_height_female[:-1] +[m
+[32m+[m[32m                             bin_edges_height_female[1:]) / 2[m
+[32m+[m[32mbin_centers_weight_female = (bin_edges_weight_female[:-1] +[m
+[32m+[m[32m                             bin_edges_weight_female[1:]) / 2[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Now, for each test sample, find the closest bin and compute likelihood[m
+[32m+[m[32mdef compute_likelihood(sample, bin_centers, histogram):[m
+[32m+[m[32m    closest_bin = np.argmin(np.abs(bin_centers - sample))[m
+[32m+[m[32m    likelihood = histogram[closest_bin] / len(x_data_train)[m
+[32m+[m[32m    return likelihood[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Calculate class likelihoods for each test sample[m
+[32m+[m[32mlikelihoods_height_male = [[m
+[32m+[m[32m    compute_likelihood(sample, bin_centers_height_male, hist_height_male) for[m
+[32m+[m[32m    sample in x_data_test[:, 0]][m
+[32m+[m[32mlikelihoods_weight_male = [[m
+[32m+[m[32m    compute_likelihood(sample, bin_centers_weight_male, hist_weight_male) for[m
+[32m+[m[32m    sample in x_data_test[:, 1]][m
+[32m+[m
+[32m+[m[32mlikelihoods_height_female = [[m
+[32m+[m[32m    compute_likelihood(sample, bin_centers_height_female, hist_height_female)[m
+[32m+[m[32m    for sample in x_data_test[:, 0]][m
+[32m+[m[32mlikelihoods_weight_female = [[m
+[32m+[m[32m    compute_likelihood(sample, bin_centers_weight_female, hist_weight_female)[m
+[32m+[m[32m    for sample in x_data_test[:, 1]][m
+[32m+[m
+[32m+[m[32mp_height_male_list = [][m
+[32m+[m[32mp_weight_male_list = [][m
+[32m+[m[32mp_height_female_list = [][m
+[32m+[m[32mp_weight_female_list = [][m
+[32m+[m
+[32m+[m[32m# Gather the likelihoods in a list that represents them[m
+[32m+[m[32mfor i in range(len(x_data_test)):[m
+[32m+[m[32m    p_height_male_list.append(likelihoods_height_male[i])[m
+[32m+[m[32m    p_weight_male_list.append(likelihoods_weight_male[i])[m
+[32m+[m[32m    p_height_female_list.append(likelihoods_height_female[i])[m
+[32m+[m[32m    p_weight_female_list.append(likelihoods_weight_female[i])[m
+[32m+[m
+[32m+[m[32m# Calculate sums of the P for all the likelihoods[m
+[32m+[m[32msum_height_male = sum(p_height_male_list)[m
+[32m+[m[32msum_weight_male = sum(p_weight_male_list)[m
+[32m+[m[32msum_height_female = sum(p_height_female_list)[m
+[32m+[m[32msum_weight_female = sum(p_weight_female_list)[m
+[32m+[m
+[32m+[m[32mprint(f"Height probability for males: {sum_height_male}")[m
+[32m+[m[32mprint(f"Weight probability for males: {sum_weight_male}")[m
+[32m+[m[32mprint(f"Height probability for females: {sum_height_female}")[m
+[32m+[m[32mprint(f"Weight probability for females: {sum_weight_female}")[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Define a function to classify a test sample based on the likelihoods[m
+[32m+[m[32mdef classify_combined(samples):[m
+[32m+[m[32m    # Classify as male (0) or female (1) based on the likelihoods[m
+[32m+[m[32m    if samples[0] * samples[1] > samples[2] * \[m
+[32m+[m[32m            samples[3]:[m
+[32m+[m[32m        return 0  # Male[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        return 1  # Female[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Define functions to classify test samples based on different features[m
+[32m+[m[32mdef classify_accuracy(sample_likelihood):[m
+[32m+[m[32m    # Classify as male (0) or female (1) based on height likelihood[m
+[32m+[m[32m    if sample_likelihood[0] > sample_likelihood[1]:[m
+[32m+[m[32m        return 0  # Male[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        return 1  # Female[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Initialize lists to store the predicted labels[m
+[32m+[m[32mpredicted_labels = [][m
+[32m+[m
+[32m+[m[32m# Classify each test sample and store the predicted label[m
+[32m+[m[32mfor i in range(len(x_data_test)):[m
+[32m+[m[32m    sample_likelihoods = [likelihoods_height_male[i],[m
+[32m+[m[32m                          likelihoods_weight_male[i],[m
+[32m+[m[32m                          likelihoods_height_female[i],[m
+[32m+[m[32m                          likelihoods_weight_female[i]][m
+[32m+[m[32m    predicted_label = classify_combined(sample_likelihoods)[m
+[32m+[m[32m    predicted_labels.append(predicted_label)[m
+[32m+[m
+[32m+[m[32m# Calculate the classification accuracy[m
+[32m+[m[32mcorrect_predictions = np.sum(predicted_labels == y_data_test)[m
+[32m+[m[32mtotal_samples = len(x_data_test)[m
+[32m+[m[32maccuracy = correct_predictions / total_samples * 100[m
+[32m+[m
+[32m+[m[32mprint(f"Classification Accuracy: {accuracy:.2f}%")[m
+[32m+[m
+[32m+[m[32m# Initialize lists to store the predicted labels[m
+[32m+[m[32mpredicted_labels_height = [][m
+[32m+[m[32mpredicted_labels_weight = [][m
+[32m+[m[32mpredicted_labels_combined = [][m
+[32m+[m
+[32m+[m[32m# Classify each test sample and store the predicted labels[m
+[32m+[m[32mfor i in range(len(x_data_test)):[m
+[32m+[m[32m    sample_likelihoods = [likelihoods_height_male[i],[m
+[32m+[m[32m                          likelihoods_height_female[i],[m
+[32m+[m[32m                          likelihoods_weight_male[i],[m
+[32m+[m[32m                          likelihoods_weight_female[i]][m
+[32m+[m
+[32m+[m[32m    # Classify based on height likelihood[m
+[32m+[m[32m    predicted_label_height = classify_accuracy(sample_likelihoods[:2])[m
+[32m+[m[32m    predicted_labels_height.append(predicted_label_height)[m
+[32m+[m
+[32m+[m[32m    # Classify based on weight likelihood[m
+[32m+[m[32m    predicted_label_weight = classify_accuracy(sample_likelihoods[2:])[m
+[32m+[m[32m    predicted_labels_weight.append(predicted_label_weight)[m
+[32m+[m
+[32m+[m[32m    # Classify based on combined height and weight likelihood[m
+[32m+[m[32m    if sample_likelihoods[0] * sample_likelihoods[2] > sample_likelihoods[1] * \[m
+[32m+[m[32m            sample_likelihoods[3]:[m
+[32m+[m[32m        predicted_labels_combined.append(0)  # Male[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        predicted_labels_combined.append(1)  # Female[m
+[32m+[m
+[32m+[m[32m# Calculate the classification accuracy for height only, weight only,[m
+[32m+[m[32m# and combined (height and weight)[m
+[32m+[m[32mcorrect_predictions_height = np.sum(predicted_labels_height == y_data_test)[m
+[32m+[m[32maccuracy_height_only = correct_predictions_height / total_samples * 100[m
+[32m+[m
+[32m+[m[32mcorrect_predictions_weight = np.sum(predicted_labels_weight == y_data_test)[m
+[32m+[m[32maccuracy_weight_only = correct_predictions_weight / total_samples * 100[m
+[32m+[m
+[32m+[m[32mcorrect_predictions_combined = np.sum(predicted_labels_combined == y_data_test)[m
+[32m+[m[32maccuracy_combined = correct_predictions_combined / total_samples * 100[m
+[32m+[m
+[32m+[m[32mprint(f"Classification Accuracy (Height Only): {accuracy_height_only:.2f}%")[m
+[32m+[m[32mprint(f"Classification Accuracy (Weight Only): {accuracy_weight_only:.2f}%")[m
+[32m+[m[32mprint(f"Classification Accuracy (Combined Height and Weight): {accuracy_combined:.2f}%")[m
+[1mdiff --git a/Ahonen_male_female_histogram.py b/Ahonen_male_female_histogram.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4e073e4[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_male_female_histogram.py[m
+[36m@@ -0,0 +1,51 @@[m
+[32m+[m[32mimport numpy[m
+[32m+[m[32mimport matplotlib.pyplot as plt[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef main():[m
+[32m+[m[32m    # Load the data[m
+[32m+[m[32m    x_data_train = numpy.loadtxt('male_female_X_train.txt')[m
+[32m+[m[32m    y_data_train = numpy.loadtxt('male_female_y_train.txt')[m
+[32m+[m
+[32m+[m[32m    x_data_test = numpy.loadtxt('male_female_X_test.txt')[m
+[32m+[m[32m    y_data_test = numpy.loadtxt('male_female_y_test.txt')[m
+[32m+[m
+[32m+[m[32m    y_data_train = y_data_train.reshape(-1, 1)[m
+[32m+[m
+[32m+[m[32m    # Combine the data[m
+[32m+[m[32m    all_data = numpy.hstack((x_data_train, y_data_train))[m
+[32m+[m[32m    male_heigth = all_data[all_data[:, 2] == 0][:, 0][m
+[32m+[m[32m    female_heigth = all_data[all_data[:, 2] == 1][:, 0][m
+[32m+[m
+[32m+[m[32m    male_weight = all_data[all_data[:, 2] == 0][:, 1][m
+[32m+[m[32m    female_weight = all_data[all_data[:, 2] == 1][:, 1][m
+[32m+[m
+[32m+[m[32m    # Create subplot so we can have both histograms in the same picture[m
+[32m+[m[32m    fig, axs = plt.subplots(1, 2, figsize=(12, 5))[m
+[32m+[m
+[32m+[m[32m    axs[0].hist(male_heigth, bins=10, range=(80, 220), alpha=0.6, label='Male',[m
+[32m+[m[32m                color='blue')[m
+[32m+[m[32m    axs[0].hist(female_heigth, bins=10, range=(80, 220), alpha=0.6,[m
+[32m+[m[32m                label='Female', color='pink')[m
+[32m+[m
+[32m+[m[32m    axs[0].set_xlabel('Height (cm)')[m
+[32m+[m[32m    axs[0].set_ylabel('Frequency')[m
+[32m+[m[32m    axs[0].set_title('Height Histogram by Gender')[m
+[32m+[m[32m    axs[0].legend()[m
+[32m+[m
+[32m+[m[32m    axs[1].hist(male_weight, bins=10, range=(30, 180), alpha=0.6, label='Male',[m
+[32m+[m[32m                color='blue')[m
+[32m+[m[32m    axs[1].hist(female_weight, bins=10, range=(30, 180), alpha=0.6,[m
+[32m+[m[32m                label='Female', color='pink')[m
+[32m+[m
+[32m+[m[32m    axs[1].set_xlabel('Weight (kg)')[m
+[32m+[m[32m    axs[1].set_ylabel('Frequency')[m
+[32m+[m[32m    axs[1].set_title('Weight Histogram by Gender')[m
+[32m+[m[32m    axs[1].legend()[m
+[32m+[m
+[32m+[m[32m    plt.tight_layout()[m
+[32m+[m[32m    plt.show()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    main()[m
+[1mdiff --git a/Ahonen_my_sort.py b/Ahonen_my_sort.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9a17622[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_my_sort.py[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m
+[32m+[m[32mdef main():[m
+[32m+[m[32m    syöte = input("Give a list of integers separated by space:").strip()\[m
+[32m+[m[32m        .split(" ")[m
+[32m+[m
+[32m+[m[32m    numerot = [eval(i) for i in syöte][m
+[32m+[m[32m    numerot.sort()[m
+[32m+[m[32m    print("Given numbers sorted: ", numerot)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    main()[m
+[1mdiff --git a/Ahonen_word_analogy.py b/Ahonen_word_analogy.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e8001fd[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_word_analogy.py[m
+[36m@@ -0,0 +1,74 @@[m
+[32m+[m[32mimport random[m
+[32m+[m[32mimport traceback[m
+[32m+[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m
+[32m+[m[32mvocabulary_file = 'word_embeddings.txt'[m
+[32m+[m
+[32m+[m[32m# Read words[m
+[32m+[m[32mprint('Read words...')[m
+[32m+[m[32mwith open(vocabulary_file, 'r', encoding="utf8") as f:[m
+[32m+[m[32m    words = [x.rstrip().split(' ')[0] for x in f.readlines()][m
+[32m+[m
+[32m+[m[32m# Read word vectors[m
+[32m+[m[32mprint('Read word vectors...')[m
+[32m+[m[32mwith open(vocabulary_file, 'r', encoding="utf8") as f:[m
+[32m+[m[32m    vectors = {}[m
+[32m+[m[32m    for line in f:[m
+[32m+[m[32m        vals = line.rstrip().split(' ')[m
+[32m+[m[32m        vectors[vals[0]] = [float(x) for x in vals[1:]][m
+[32m+[m
+[32m+[m[32mvocab_size = len(words)[m
+[32m+[m[32mvocab = {w: idx for idx, w in enumerate(words)}[m
+[32m+[m[32mivocab = {idx: w for idx, w in enumerate(words)}[m
+[32m+[m
+[32m+[m[32m# W contains vectors for[m
+[32m+[m[32mvector_dim = len(vectors[ivocab[0]])[m
+[32m+[m[32mW = np.zeros((vocab_size, vector_dim))[m
+[32m+[m[32mfor word, v in vectors.items():[m
+[32m+[m[32m    if word == '<unk>':[m
+[32m+[m[32m        continue[m
+[32m+[m[32m    W[vocab[word], :] = v[m
+[32m+[m
+[32m+[m[32m# Main loop for analogy[m
+[32m+[m[32mwhile True:[m
+[32m+[m[32m    input_term = input("\nEnter three words (EXIT to break): ").lower()[m
+[32m+[m[32m    list_a = {}[m
+[32m+[m[32m    if input_term == 'exit':[m
+[32m+[m[32m        break[m
+[32m+[m[32m    else:[m
+[32m+[m
+[32m+[m[32m        try:[m
+[32m+[m[32m            input_term = input_term.split(" ")[m
+[32m+[m
+[32m+[m[32m            x = vocab[input_term[0]][m
+[32m+[m[32m            y = vocab[input_term[1]][m
+[32m+[m[32m            z = vocab[input_term[2]][m
+[32m+[m
+[32m+[m[32m            answer = W[z] + (W[y] - W[x])[m
+[32m+[m
+[32m+[m[32m            for row, word in enumerate(W):[m
+[32m+[m[32m                distance = np.sqrt(np.sum((answer - word) ** 2))[m
+[32m+[m[32m                if len(list_a) < 3:[m
+[32m+[m[32m                    list_a[row] = distance[m
+[32m+[m[32m                else:[m
+[32m+[m[32m                    for key, value in list_a.items():[m
+[32m+[m[32m                        if distance < value:[m
+[32m+[m[32m                            list_a[row] = list_a.pop(key)[m
+[32m+[m[32m                            list_a |= {row: distance}[m
+[32m+[m[32m                            break[m
+[32m+[m
+[32m+[m[32m            print(f"""Three best words to the analogy \n"{input_term[0]} """[m
+[32m+[m[32m                  f"""is to {input_term[1]} as {input_term[2]} is to X" """)[m
+[32m+[m[32m            print("\n                            Word ",[m
+[32m+[m[32m                  "        Distance")[m
+[32m+[m[32m            print([m
+[32m+[m[32m                "------------------------------------------------------")[m
+[32m+[m
+[32m+[m[32m            for key, value in dict([m
+[32m+[m[32m                    sorted(list_a.items(), key=lambda item: item[1])).items():[m
+[32m+[m[32m                print("%32s\t\t  %f" % (ivocab[key], value))[m
+[32m+[m[32m        except IndexError:[m
+[32m+[m[32m            print("Wrong number of words")[m
+[32m+[m[32m        except KeyError as e:[m
+[32m+[m[32m            print(f"Word {e} was not found")[m
+[1mdiff --git a/Ahonen_word_search.py b/Ahonen_word_search.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a26d918[m
+[1m--- /dev/null[m
+[1m+++ b/Ahonen_word_search.py[m
+[36m@@ -0,0 +1,65 @@[m
+[32m+[m[32mimport random[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m
+[32m+[m[32mvocabulary_file = 'word_embeddings.txt'[m
+[32m+[m
+[32m+[m[32m# Read words[m
+[32m+[m[32mprint('Read words...')[m
+[32m+[m[32mwith open(vocabulary_file, 'r', encoding="utf8") as f:[m
+[32m+[m[32m    words = [x.rstrip().split(' ')[0] for x in f.readlines()][m
+[32m+[m
+[32m+[m[32m# Read word vectors[m
+[32m+[m[32mprint('Read word vectors...')[m
+[32m+[m[32mwith open(vocabulary_file, 'r',encoding="utf8") as f:[m
+[32m+[m[32m    vectors = {}[m
+[32m+[m[32m    for line in f:[m
+[32m+[m[32m        vals = line.rstrip().split(' ')[m
+[32m+[m[32m        vectors[vals[0]] = [float(x) for x in vals[1:]][m
+[32m+[m
+[32m+[m[32mvocab_size = len(words)[m
+[32m+[m[32mvocab = {w: idx for idx, w in enumerate(words)}[m
+[32m+[m[32mivocab = {idx: w for idx, w in enumerate(words)}[m
+[32m+[m
+[32m+[m[32m# W contains vectors for[m
+[32m+[m[32mprint('Vocabulary word vectors')[m
+[32m+[m[32mvector_dim = len(vectors[ivocab[0]])[m
+[32m+[m[32mW = np.zeros((vocab_size, vector_dim))[m
+[32m+[m[32mfor word, v in vectors.items():[m
+[32m+[m[32m    if word == '<unk>':[m
+[32m+[m[32m        continue[m
+[32m+[m[32m    W[vocab[word], :] = v[m
+[32m+[m[32mprint(W.shape)[m
+[32m+[m
+[32m+[m[32m# Main loop for analogy[m
+[32m+[m[32mwhile True:[m
+[32m+[m[32m    input_term = input("\nEnter a word (EXIT to break): ").lower()[m
+[32m+[m[32m    list_a = {}[m
+[32m+[m[32m    if input_term == 'exit':[m
+[32m+[m[32m        break[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        try:[m
+[32m+[m[32m            searched_word = vocab[input_term][m
+[32m+[m[32m            for row, word in enumerate(W):[m
+[32m+[m[32m                distance = np.sqrt(np.sum((W[searched_word] - word) ** 2))[m
+[32m+[m[32m                if len(list_a) < 4:[m
+[32m+[m[32m                    list_a[row] = distance[m
+[32m+[m[32m                else:[m
+[32m+[m[32m                    for key, value in list_a.items():[m
+[32m+[m[32m                        if distance < value:[m
+[32m+[m[32m                            list_a[row] = list_a.pop(key)[m
+[32m+[m[32m                            list_a |= {row: distance}[m
+[32m+[m[32m                            break[m
+[32m+[m[32m            print(f"Four words closest to {input_term}")[m
+[32m+[m[32m            print("\n                            Word "[m
+[32m+[m[32m                  "         Distance")[m
+[32m+[m[32m            print("---------------------------------------------------")[m
+[32m+[m[32m            for key, value in dict([m
+[32m+[m[32m                    sorted(list_a.items(), key=lambda item: item[1])).items():[m
+[32m+[m[32m                print("%32s\t\t  %f" % (ivocab[key], value))[m
+[32m+[m[32m        except KeyError:[m
+[32m+[m[32m            print(f"Word {input_term} could not be found")[m
+[32m+[m[32m        except IndexError:[m
+[32m+[m[32m            print("Wrong amoun of words")[m
+[32m+[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/Cesar Cypher.py b/Cesar Cypher.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1f8c348[m
+[1m--- /dev/null[m
+[1m+++ b/Cesar Cypher.py[m	
+[36m@@ -0,0 +1,73 @@[m
+[32m+[m[32mfrom timeit import default_timer as timer[m
+[32m+[m[32mlist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',[m
+[32m+[m[32m        'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef shift(text, shift2):[m
+[32m+[m[32m    result = ""[m
+[32m+[m[32m    if abs(shift2) > len(list) - 1:[m
+[32m+[m[32m        if shift2 > 0:[m
+[32m+[m[32m            while shift2 > len(list) - 1:[m
+[32m+[m[32m                shift2 = shift2 - len(list)[m
+[32m+[m[32m        else:[m
+[32m+[m[32m            while shift2 < -len(list) + 1:[m
+[32m+[m[32m                shift2 = shift2 + len(list)[m
+[32m+[m
+[32m+[m[32m    for letter in text:[m
+[32m+[m[32m        if list.count(letter) == 0:[m
+[32m+[m[32m            result += letter[m
+[32m+[m[32m        else:[m
+[32m+[m[32m            new_spot = list.index(letter) + shift2[m
+[32m+[m[32m            if new_spot > len(list) - 1:[m
+[32m+[m[32m                new_spot -= len(list)[m
+[32m+[m[32m            elif new_spot < -len(list) + 1:[m
+[32m+[m[32m                new_spot += len(list)[m
+[32m+[m[32m            result += list[new_spot][m
+[32m+[m[32m    return result[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef enc_or_dec(result, enc_or_dec_input, shift_key=0, plaintxt=""):[m
+[32m+[m
+[32m+[m[32m    if enc_or_dec_input == 1:[m
+[32m+[m[32m        result = shift(plaintxt, shift_key)[m
+[32m+[m
+[32m+[m[32m    elif enc_or_dec_input == 2:[m
+[32m+[m[32m        result = shift(plaintxt, -shift_key)[m
+[32m+[m
+[32m+[m[32m    elif enc_or_dec_input == 3:[m
+[32m+[m
+[32m+[m[32m        for key in range(0, len(list) - 1):[m
+[32m+[m[32m            result += str(key) + " " + shift(plaintxt, key) + "\n"[m
+[32m+[m
+[32m+[m[32m    return result[m
+[32m+[m
+[32m+[m[32mdef main():[m
+[32m+[m
+[32m+[m[32m    while True:[m
+[32m+[m[32m        enc_or_dec_input = int(input("Enter 1 to encrypt, 2 to decrypt or 3 to crack: "))[m
+[32m+[m[32m        result = ""[m
+[32m+[m[32m        if enc_or_dec_input != 3:[m
+[32m+[m[32m            keys = input("Enter shift key(s): ").split(" ")[m
+[32m+[m[32m            plaintxt = input("Input text: ").lower()[m
+[32m+[m
+[32m+[m[32m            t0 = timer()[m
+[32m+[m[32m            for shift_key in keys:[m
+[32m+[m[32m                result = enc_or_dec(result, enc_or_dec_input, int(shift_key),[m
+[32m+[m[32m                                    plaintxt)[m
+[32m+[m[32m                plaintxt = result[m
+[32m+[m[32m            t1 = timer()[m
+[32m+[m[32m        else:[m
+[32m+[m[32m            plaintxt = input("Input text: ").lower()[m
+[32m+[m[32m            t0 = timer()[m
+[32m+[m[32m            result = enc_or_dec(result, enc_or_dec_input, None,  plaintxt)[m
+[32m+[m[32m            t1 = timer()[m
+[32m+[m
+[32m+[m[32m        print(result, " : ", t1 - t0, " s")[m
+[32m+[m
+[32m+[m[32m        cont = input("Continue?(Y/N) ").lower()[m
+[32m+[m[32m        if cont == "n":[m
+[32m+[m[32m            return False[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == '__main__':[m
+[32m+[m[32m    main()[m
+[1mdiff --git a/batches.meta b/batches.meta[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4467a6e[m
+Binary files /dev/null and b/batches.meta differ
+[1mdiff --git a/cifar10_illustrate.py b/cifar10_illustrate.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c409461[m
+[1m--- /dev/null[m
+[1m+++ b/cifar10_illustrate.py[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mimport pickle[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m[32mimport matplotlib.pyplot as plt[m
+[32m+[m[32mfrom random import random[m
+[32m+[m
+[32m+[m[32mdef unpickle(file):[m
+[32m+[m[32m    with open(file, 'rb') as f:[m
+[32m+[m[32m        dict = pickle.load(f, encoding="latin1")[m
+[32m+[m[32m    return dict[m
+[32m+[m
+[32m+[m[32mdatadict = unpickle('data_batch_1')[m
+[32m+[m[32m#datadict = unpickle('/home/kamarain/Data/cifar-10-batches-py/test_batch')[m
+[32m+[m
+[32m+[m[32mX = datadict["data"][m
+[32m+[m[32mY = datadict["labels"][m
+[32m+[m
+[32m+[m[32mprint(X.shape)[m
+[32m+[m
+[32m+[m[32mlabeldict = unpickle('batches.meta')[m
+[32m+[m[32mlabel_names = labeldict["label_names"][m
+[32m+[m
+[32m+[m[32mX = X.reshape(10000, 3, 32, 32).transpose(0,2,3,1).astype("uint8")[m
+[32m+[m[32mY = np.array(Y)[m
+[32m+[m
+[32m+[m[32mfor i in range(X.shape[0]):[m
+[32m+[m[32m    # Show some images randomly[m
+[32m+[m[32m    if random() > 0.999:[m
+[32m+[m[32m        plt.figure(1);[m
+[32m+[m[32m        plt.clf()[m
+[32m+[m[32m        plt.imshow(X[i])[m
+[32m+[m[32m        plt.title(f"Image {i} label={label_names[Y[i]]} (num {Y[i]})")[m
+[32m+[m[32m        plt.pause(1)[m
+[1mdiff --git a/data_batch_1 b/data_batch_1[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ab404a5[m
+Binary files /dev/null and b/data_batch_1 differ
+[1mdiff --git a/main.py b/main.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5596b44[m
+[1m--- /dev/null[m
+[1m+++ b/main.py[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m# This is a sample Python script.[m
+[32m+[m
+[32m+[m[32m# Press Shift+F10 to execute it or replace it with your code.[m
+[32m+[m[32m# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef print_hi(name):[m
+[32m+[m[32m    # Use a breakpoint in the code line below to debug your script.[m
+[32m+[m[32m    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Press the green button in the gutter to run the script.[m
+[32m+[m[32mif __name__ == '__main__':[m
+[32m+[m[32m    print_hi('PyCharm')[m
+[32m+[m
+[32m+[m[32m# See PyCharm help at https://www.jetbrains.com/help/pycharm/[m
+[1mdiff --git a/male_female_X_test.txt b/male_female_X_test.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a165d53[m
+[1m--- /dev/null[m
+[1m+++ b/male_female_X_test.txt[m
+[36m@@ -0,0 +1,597 @@[m
+[32m+[m[32m1.613300000000000125e+02 7.464000000000000057e+01[m
+[32m+[m[32m1.217699999999999960e+02 7.293000000000000682e+01[m
+[32m+[m[32m1.728400000000000034e+02 4.513000000000000256e+01[m
+[32m+[m[32m1.635699999999999932e+02 9.945000000000000284e+01[m
+[32m+[m[32m1.699099999999999966e+02 8.581000000000000227e+01[m
+[32m+[m[32m1.651699999999999875e+02 6.172999999999999687e+01[m
+[32m+[m[32m1.579000000000000057e+02 7.248999999999999488e+01[m
+[32m+[m[32m1.664000000000000057e+02 8.679999999999999716e+01[m
+[32m+[m[32m1.491800000000000068e+02 5.236999999999999744e+01[m
+[32m+[m[32m1.574199999999999875e+02 6.859999999999999432e+01[m
+[32m+[m[32m1.492500000000000000e+02 6.931999999999999318e+01[m
+[32m+[m[32m1.
